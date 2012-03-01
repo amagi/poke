@@ -1,0 +1,35 @@
+<h1>Listing buttlelists</h1>
+
+<table>
+  <tr>
+    <th>Nickname</th>
+    <th>Skilla</th>
+    <th>Skillb</th>
+    <th>Skillc</th>
+    <th>Skilld</th>
+    <th>Pokemon</th>
+    <th>Personality</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @buttlelists.each do |buttlelist| %>
+  <tr>
+    <td><%= buttlelist.nickname %></td>
+    <td><%= buttlelist.skilla %></td>
+    <td><%= buttlelist.skillb %></td>
+    <td><%= buttlelist.skillc %></td>
+    <td><%= buttlelist.skilld %></td>
+    <td><%= buttlelist.pokemon_id %></td>
+    <td><%= buttlelist.personality %></td>
+    <td><%= link_to 'Show', buttlelist %></td>
+    <td><%= link_to 'Edit', edit_buttlelist_path(buttlelist) %></td>
+    <td><%= link_to 'Destroy', buttlelist, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Buttlelist', new_buttlelist_path %>

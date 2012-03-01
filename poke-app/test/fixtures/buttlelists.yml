@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nickname: MyString
+  skilla: MyString
+  skillb: MyString
+  skillc: MyString
+  skilld: MyString
+  pokemon_id: 1
+  personality: MyString
+
+two:
+  nickname: MyString
+  skilla: MyString
+  skillb: MyString
+  skillc: MyString
+  skilld: MyString
+  pokemon_id: 1
+  personality: MyString

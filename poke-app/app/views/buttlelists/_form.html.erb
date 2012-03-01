@@ -1,0 +1,45 @@
+<%= form_for(@buttlelist) do |f| %>
+  <% if @buttlelist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@buttlelist.errors.count, "error") %> prohibited this buttlelist from being saved:</h2>
+
+      <ul>
+      <% @buttlelist.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nickname %><br />
+    <%= f.text_field :nickname %>
+  </div>
+  <div class="field">
+    <%= f.label :skilla %><br />
+    <%= f.text_field :skilla %>
+  </div>
+  <div class="field">
+    <%= f.label :skillb %><br />
+    <%= f.text_field :skillb %>
+  </div>
+  <div class="field">
+    <%= f.label :skillc %><br />
+    <%= f.text_field :skillc %>
+  </div>
+  <div class="field">
+    <%= f.label :skilld %><br />
+    <%= f.text_field :skilld %>
+  </div>
+  <div class="field">
+    <%= f.label :pokemon_id %><br />
+    <%= f.number_field :pokemon_id %>
+  </div>
+  <div class="field">
+    <%= f.label :personality %><br />
+    <%= f.text_field :personality %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

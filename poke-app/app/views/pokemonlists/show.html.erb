@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>No:</b>
+  <%= @pokemonlist.no %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @pokemonlist.name %>
+</p>
+
+<p>
+  <b>Typea:</b>
+  <%= @pokemonlist.typea %>
+</p>
+
+<p>
+  <b>Typeb:</b>
+  <%= @pokemonlist.typeb %>
+</p>
+
+
+<%= link_to 'Edit', edit_pokemonlist_path(@pokemonlist) %> |
+<%= link_to 'Back', pokemonlists_path %>

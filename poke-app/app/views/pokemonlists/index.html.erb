@@ -1,0 +1,61 @@
+<h1>PokemonLists</h1>
+<table border="2">
+<tr>
+  <td colspan="5">五十音検索</td> <td colspan="2">タイプ別検索</td>
+</tr>
+<tr>
+  <td>あ</td><td>い</td><td>う</td><td>え</td><td>お</td> <td>ノーマル</td><td><%= link_to 'こおり ' ,:controller => :pokemonlist ,:id => "こおり" ,:action => :datail %></td>
+</tr>
+<tr>
+  <td>か</td><td>き</td><td>く</td><td>け</td><td>こ</td> <td>ほのお</td><td>エスパー</td>
+</tr>
+<tr>
+  <td>さ</td><td>し</td><td>す</td><td>せ</td><td>そ</td> <td>みず</td><td>あく</td>
+</tr>
+<tr>
+  <td>た</td><td>ち</td><td>つ</td><td>て</td><td>と</td> <td>でんき</td><td>どく</td>
+</tr>
+<tr>
+  <td>な</td><td>に</td><td>ぬ</td><td>ね</td><td>の</td> <td>くさ</td><td>ごーすと</td>
+</tr>
+<tr>
+  <td>は</td><td>ひ</td><td>ふ</td><td>へ</td><td>ほ</td> <td>じめん</td><td>ドラゴン</td>
+</tr>
+<tr>
+  <td>ま</td><td>み</td><td>む</td><td>め</td><td>も</td> <td>かくとう</td> <td>はがね</td>
+</tr>
+<tr>
+  <td>や</td><td></td><td>ゆ</td><td></td><td>よ</td> <td>いわ</td> <td>ひこう</td>
+</tr>
+<tr>
+  <td>ら</td><td>り</td><td>る</td><td>れ</td><td>ろ</td> <td>むし</td>
+</tr>
+<tr>
+  <td>わ</td><td></td><td></td><td></td><td></td>
+</tr>
+</table>
+<table>
+  <tr>
+    <th>No</th>
+    <th>Name</th>
+    <th>Type-1</th>
+    <th>Type-2</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pokemonlists.each do |pokemonlist| %>
+  <tr>
+    <td><%= pokemonlist.no %></td>
+    <td><%= pokemonlist.name %></td>
+    <td><%= pokemonlist.typea %></td>
+    <td><%= pokemonlist.typeb %></td>
+    <td><%= link_to 'Show', pokemonlist %></td>
+    <td><%= link_to 'Destroy', pokemonlist, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<!-- 
+<%= link_to 'New Pokemonlist', new_pokemonlist_path %> -->

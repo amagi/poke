@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nickname:</b>
+  <%= @buttlelist.nickname %>
+</p>
+
+<p>
+  <b>Skilla:</b>
+  <%= @buttlelist.skilla %>
+</p>
+
+<p>
+  <b>Skillb:</b>
+  <%= @buttlelist.skillb %>
+</p>
+
+<p>
+  <b>Skillc:</b>
+  <%= @buttlelist.skillc %>
+</p>
+
+<p>
+  <b>Skilld:</b>
+  <%= @buttlelist.skilld %>
+</p>
+
+<p>
+  <b>Pokemon:</b>
+  <%= @buttlelist.pokemon_id %>
+</p>
+
+<p>
+  <b>Personality:</b>
+  <%= @buttlelist.personality %>
+</p>
+
+
+<%= link_to 'Edit', edit_buttlelist_path(@buttlelist) %> |
+<%= link_to 'Back', buttlelists_path %>
